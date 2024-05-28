@@ -1,6 +1,11 @@
 # crystecks
 Digital card dueling game with sharable/playable usermade content.
 
+## Setup
+
+ - Download and Run Defold 1.8.0
+ - Select Open From Disk along the bottom, then navigate to `game.project`
+
 ## Main Concept
 A decentralized card dueling game. Players earn coins from ai matches or matches with friends. They can buy the Vanilla packs provided by me through updates, or can buy a Set Printer which let's them build and share their own Set that other players can also Share and buy packs from. Card effects are programmatic, like conditions and actions that the player can fill out on their own, and the art is a bunch of stickers that can have filters, tints, and backgrounds. Card Game format/style would be mostly inspired by Magic The Gathering. All duels and set sharing would happen with local communications, wifi/bluetooth and wifi-direct. In theory this would create small localized meta-game structures for each small community and friend group who participates.
 
