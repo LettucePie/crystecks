@@ -17,6 +17,8 @@ A decentralized card dueling game. Players earn coins from ai matches or matches
 - 6 Crystals representing Elemental Attunements, Faction, Gameplay identity, and emotional energy.
 - Starting Health of 20
 - Max health of 30
+- All cards can be resources
+  - Each turn you can attune one card into your attunement spectrum
 
 ### Crystals / Colors
 RGBCMY (a fun nod to virtual colorspace)
@@ -61,6 +63,14 @@ For Rules regarding Single Color or Multicolor, we're playing off the Light and 
 A classification listing what functionalities each Crystal has access too, akin to the Color-Pie.
 
 WIP. Mainly need to touch on gameplay points of Speed, Recovery, Strength, Flexibility.
+
+### Resources / Crystal Attunement and Energy
+Cards have costs to play, and so we have a resource system. Instead of dealing with concepts like land or energy cards; and all of the baggage that accompanies it, we're going to try a more modern approach. Once each turn players can choose to attune a card from their hand, increasing their attunement. The level of attunement dictates the amount of Energy available for playing cards that turn, in each spectrum attuned too. When a Player attunes a card that has just Prism color cost, their Prism Attunement increases by one. Same for if a card has only Red Green Blue Cyan Magenta or Yellow costs. If a player attunes a card with more than one color cost, they get to choose the color to attune to. So a card with Red and Magenta costs could level up their Red or Magenta attuenement by one.
+
+During Upkeep the player gets charged with energy matching their attunement spectrum. So if it's turn 4 and they have attuned 2 Red and 1 Yellow they start their turn with 2 Red Energy and 1 Yellow Energy. They could play a card using that energy or attune another card, lets say they attune for Prism energy. Now their attunement spectrum is 2 Red, 1 Yellow, and 1 Prism. Each turn a player gets to attune a card once for free, and it immediately charges their energy. Some card effects (CATS) can increase attunement but not always charged.
+
+### Playing Cards / Energy Costs
+Just above is the Attunement and Energy section. Referring to that, we had an example where it's turn 4 and we have 2 Red, 1 Yellow, and 1 Prism Energy / Attunement. Those Enery resources get consumed upon playing cards that require them. Colors that aren't Prism require energy of their matching color to play. So with 2 Red, 1 Yellow, and 1 Prism we can play 2 cards with a cost a 1 Red, or 1 Card with a cost of 2 Red, or 1 card with a cost a 1 Red and 1 Yellow. Prism Costs can be covered by Prism energy or any color energy. 
 
 ### Sets and Packs
 Players can make and distribute Sets. Sets have 30 cards made by the player. Connecting players can choose to also distribute the set. Upon accepting the set, they have to approve or disapprove the name and art of each card, using rng to replace if they don't like it. After a set has been accepted and approved, other connecting players can accept it in the future, and they too have to approve it. Also the player gets 3 free packs after approving it. Packs contain 5 cards, but each card comes in pairs, bringing a total of 10.
@@ -160,5 +170,5 @@ Glow Fairy Crystal Forest. Very Colorful and Elemental.
   - If the process takes too long, or is too difficult to use, the project is dead.
   - However if it lacks complexity and creative opportunity, it's likely to grow stale.
 
- ## Why?
+## Why?
  I'm a fan of MTG, and I also feel like Cardboard Games could become more restricted and harder to produce in the wake of Climate Change. The only alternative is Magic Online, or Arena, and I don't particularly care for either. At the same time, I always have random ideas for cool MTG sets, but the liklihood of my ideas reaching Wizards of the Coast is extremely low. I'm sure others have fun ideas too... so yeah, why not make a digital card game that is potentially future-proof, and doesn't require any cardboard or central server?
