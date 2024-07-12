@@ -64,6 +64,13 @@ A classification listing what functionalities each Crystal has access too, akin 
 
 WIP. Mainly need to touch on gameplay points of Speed, Recovery, Strength, Flexibility.
 
+#### Tribals
+Rather than allowing CATS and other buffs work off of a Fiend/Creature type, such as "other Goblins you control get +1/+0", let's use the descriptive adjectives for each color (as seen in Crystals / Colors).
+
+An issue I was facing before was trying to figure out how to allow Tribal buffs / Fiend type synergy. I don't want to limit the amount/type of Fiends people can design with sets. If they want to make an entire set of Deer Fiends that's great. The issue is if they make cards that buff Deer and someone else makes some ultra powerful set that also has Deer then we have a problem where Deer become the most valuable type of Fiend; people may feel incentivized to only make new sets just using Deer.
+
+So let's use the Crystal / Color descriptive adjectives. It allows us to buff types of creatures while also applying some sense of power distribution and alignment. Currently there is 4 for each Color, 2 "positive" and 2 "negative". This will probably need to be expanded a bit more, and some descriptors that blend between multiple colors could be nice too.
+
 ### Resources / Crystal Attunement and Energy
 Cards have costs to play, and so we have a resource system. Instead of dealing with concepts like land or energy cards; and all of the baggage that accompanies it, we're going to try a more modern approach. Once each turn players can choose to attune a card from their hand, increasing their attunement. The level of attunement dictates the amount of Energy available for playing cards that turn, in each spectrum attuned too. When a Player attunes a card that has just Prism color cost, their Prism Attunement increases by one. Same for if a card has only Red Green Blue Cyan Magenta or Yellow costs. If a player attunes a card with more than one color cost, they get to choose the color to attune to. So a card with Red and Magenta costs could level up their Red or Magenta attuenement by one.
 
@@ -136,9 +143,12 @@ Card properties are as follows:
 - An integer for card type, most likely enum
   - `[Fiend, Spell, Cantrip, Charm]`
 - A follow-up integer enum for subtype
-  - Fiends may have a whole table of Fiend Types or Occupations like "Rabbit Warrior" or "Frog Receptionist" idk I haven't gotten that far yet
+  - For Fiends this will connect to the Color trait / adjective.
+    - Max of 2, one Positive trait and one Negative?
   - Spells and Cantrips probably won't make much use of this.
   - Charms could have "Battlefield Charm" or "Fiend Charm" or "Player Charm".
+- Another String for Fiends describing what they are such as "Deer" or "Human", ignore otherwise
+  - Default value will be randomly pulled from a premade list of generic animals and fantasy races.
 - Power and Health for Fiends, ignore otherwise
   - Default values of `0`
 - Array of Effect Codes
