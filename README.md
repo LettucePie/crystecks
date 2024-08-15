@@ -3,8 +3,8 @@ Digital card dueling game with sharable/playable usermade content.
 
 ## Setup
 
- - Download and Run Defold 1.8.0
- - Select Open From Disk along the bottom, then navigate to `game.project`
+ - Download and Run Godot 4.2+
+ - Select Import or Scan from the top left and navigate to the directory.
 
 ## Main Concept
 A decentralized card dueling game. Players earn coins from ai matches or matches with friends. They can buy the Vanilla packs provided by me through updates, or can buy a Set Printer which let's them build and share their own Set that other players can also Share and buy packs from. Card effects are programmatic, like conditions and actions that the player can fill out on their own, and the art is a bunch of stickers that can have filters, tints, and backgrounds. Card Game format/style would be mostly inspired by Magic The Gathering. All duels and set sharing would happen with local communications, wifi/bluetooth and wifi-direct. In theory this would create small localized meta-game structures for each small community and friend group who participates.
@@ -89,14 +89,14 @@ Sets are designed by restrictions called Paradigms. The Paradigm types are integ
    - 3 of 6 Crystal pairs are chosen, and are thus Dichromatic (aka multicolored).
    - The Crystal pairs can intercept.
    - There has to be 1 Mythic for each chosen Crystal pair, 2 Rares, 2 Uncommons, and the rest Common.
-     - Example without interceptions.
-     - Cyan + Red gets 1 Mythic, 2 Rares, 2 Uncommons, and 5 Commons. For a total of 10
-     - Magenta + Green gets the same, 1 Mythic, 2 Rares, 2 Uncommons, and 5 Commons.
-     - Yellow + Blue. 1 Mythic, 2 Rares, 2 Uncommons, 5 Commons.
-     - Example with interceptions.
-     - Red + Yellow
-     - Yellow + Blue
-     - Blue + Red
+	 - Example without interceptions.
+	 - Cyan + Red gets 1 Mythic, 2 Rares, 2 Uncommons, and 5 Commons. For a total of 10
+	 - Magenta + Green gets the same, 1 Mythic, 2 Rares, 2 Uncommons, and 5 Commons.
+	 - Yellow + Blue. 1 Mythic, 2 Rares, 2 Uncommons, 5 Commons.
+	 - Example with interceptions.
+	 - Red + Yellow
+	 - Yellow + Blue
+	 - Blue + Red
  - Standard Paradigm
    - Use all 6 Crystals
    - Each Crystal has to have 5 Monochromatic cards. 
@@ -105,25 +105,25 @@ Sets are designed by restrictions called Paradigms. The Paradigm types are integ
    - Use all 6 Crystals
    - Each Crystal has to have 3 Monochromatic cards, and 2 Dichromatic.
    - Uses Standard Rarity Table.
-     - Example:
-     - Red has 3 Monochromatic cards, a Red + Green and a Red + Yellow
-     - Green has 3 Monochromaic cards, a Green + Red and a Green + Blue
-     - etc.
+	 - Example:
+	 - Red has 3 Monochromatic cards, a Red + Green and a Red + Yellow
+	 - Green has 3 Monochromaic cards, a Green + Red and a Green + Blue
+	 - etc.
  - Pyramid Paradigm
    - One Crystal is chosen to have the most, then 2 for fewer, 2 more for even less, then the last gets only one, and it has to be Mythic.
    - The chosen one Crystal gets 1 Rare, 4 Uncommons, and 4 Commons.
    - The next 2 down get 2 Rares and 2 Uncommons, 2 Commons.
    - The next and final 2 down get 1 Mythic, 1 Rare, 2 Uncommons.
-     - Example: We choose Green as the Tier 1, Red and Blue as Tier 2, Cyan and Yellow as Tier 3, and Magenta as Outcast
-     - Green gets 9 Cards: 1 Rare, 4 Uncommon, 4 Common
-     - Red and Blue get 6 Cards each, total of 12: 2 Rare, 2 Uncommon, 2 Common
-     - Cyan and Yellow get 4 Cards each, total of 8: 1 Mythic, 1 Rare, 2 Uncommon
-     - Magenta gets 1 Mythic card.
+	 - Example: We choose Green as the Tier 1, Red and Blue as Tier 2, Cyan and Yellow as Tier 3, and Magenta as Outcast
+	 - Green gets 9 Cards: 1 Rare, 4 Uncommon, 4 Common
+	 - Red and Blue get 6 Cards each, total of 12: 2 Rare, 2 Uncommon, 2 Common
+	 - Cyan and Yellow get 4 Cards each, total of 8: 1 Mythic, 1 Rare, 2 Uncommon
+	 - Magenta gets 1 Mythic card.
  - Duel Paradigm
    - 2 Crystals are chosen.
    - 15 cards to each, all Monochromatic.
    - Each gets 1 Mythic, 2 Rares, 4 Uncommon, 8 Common.
-     - Example: 15 Red, and 15 Blue.
+	 - Example: 15 Red, and 15 Blue.
  - Void Paradigm
    - Any amount of any Crystal, Mono or Di-Chromatic.
    - 6 Rares, 12 Uncommon, 12 Common.
@@ -144,7 +144,7 @@ Card properties are as follows:
   - `[Fiend, Spell, Cantrip, Charm]`
 - A follow-up integer enum for subtype
   - For Fiends this will connect to the Color trait / adjective.
-    - Max of 2, one Positive trait and one Negative?
+	- Max of 2, one Positive trait and one Negative?
   - Spells and Cantrips probably won't make much use of this.
   - Charms could have "Battlefield Charm" or "Fiend Charm" or "Player Charm".
 - Another String for Fiends describing what they are such as "Deer" or "Human", ignore otherwise

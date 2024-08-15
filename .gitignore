@@ -1,10 +1,5 @@
-/.internal
-/build
-.externalToolBuilders
-.DS_Store
-Thumbs.db
-.lock-wscript
-*.pyc
-.project
-.cproject
-builtins
+# Godot 4+ specific ignores
+.godot/
+*.kra~
+*.kra-autosave.kra
+*.blend1
