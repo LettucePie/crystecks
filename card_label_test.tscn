@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://crnknj3gh8q0o"]
+
+[ext_resource type="Script" path="res://card_label_test.gd" id="1_nyaay"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_nyaay")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.792207, 0.409066, 0.427737, 1)
+polygon = PackedVector2Array(-50, -90, -50, 90, 50, 90, 50, -90)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -48.0
+offset_top = -87.0
+offset_right = 49.0
+offset_bottom = 17.0
+text = "Label Text"
