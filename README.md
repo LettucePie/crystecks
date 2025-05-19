@@ -153,6 +153,11 @@ Card properties are as follows:
   - Default values of `0`
 - Array of Effect Codes
 
+#### SuperTypes
+In a traditional sense, a card is the object that is placed onto the board. In this case though, since we're purely digital we don't have to refer to just *card*. We can distinguish absolutely that cards contain spells, and those spells either *Manifest* something or execute an effect/ability. With this in mind;
+ - Fiends and Charms are Manifestations
+ - Spells and Cantrips are Encantations
+
 How Card Images will be made is currently undecided.
 - Sticker system, where players arrange and color stickers in an area?
 - Camera Access?
