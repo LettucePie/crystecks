@@ -132,8 +132,7 @@ Sets are designed by restrictions called Paradigms. The Paradigm types are integ
 When crafting the Sets, each Paradigm will have a step by step process. So the Standard and Primsatic Paradigm will have 6 tabs/steps the player can switch through for each Crystal requirement. The Pyramid will have steps for each tier. Void will be just one single step. Hybrid will have a declaration of colors step, then assigning cards to those 3 declarations.
 
 
-### Cards / Card Creation
-All created cards will be using predefined Condition, Action code structure. Label all these like C1C2E3 internally. This way if someone gets the same card by chance from the same set or different they receive a partial refund. Also this helps with reducing file size for transferring the cards. 
+### Cards
 
 Card properties are as follows:
 - An Image within a colored Border
@@ -156,8 +155,10 @@ Card properties are as follows:
 #### Super Types
 In a traditional sense, a card is the object that is placed onto the board. In this case though, since we're purely digital we don't have to refer to just *card*. We can distinguish absolutely that cards contain spells, and those spells either *Manifest* something or execute an effect/ability. With this in mind;
  - Fiends and Charms are Manifestations
+   - Manifestations are Manifested
    - They can also be either Heroic or Villainous
  - Spells and Cantrips are Encantations
+   - Encantations are Chanted
 
 #### Heroic or Villainous
 To assist with card story-telling, cards can have a Super Type called Heroic, or Villainous. All of these cards must have a CAT for if the card is already in play to resolve a different effect. This could be on the backside of the card, but we're digital so we can really have fun with the design.
@@ -178,16 +179,47 @@ How Card Images will be made is currently undecided.
 - Draw/Paint tools?
 - Can't really stop anyone from making offensive content here...
 
-#### Abilities, Keywords, CATS
+### Abilities, Keywords, CATS
 All Condition Action Triggers or CATS will have Rarity levels to associate with the Rarity of card template, as well as Crystal Restrictions. Making a card for the player should start with what Crystal, then CATS load in a list depending on Rarity and Crystal. The effects and themes will be based on the Crystal Spectrum. Some CATS will be commonplace, and basically become Keywords. 
 - Card Effects and abilities all have a hard cap of 3 triggers, until next upkeep.
 
+All created cards will be using predefined Condition, Action code structure. Label all these like C1C2E3 internally. This way if someone gets the same card by chance from the same set or different they receive a partial refund. Also this helps with reducing file size for transferring the cards. 
+
+#### Creating CATS
 How CATS are provided during creation is currently undecided.
 - Limited Randomly decided amount?
 - Access to ALL possible CATS for a Crystal/Color?
 - Limit based on chosen Paradigm?
 
 Players should be able to combine multiple weaker level CATS on a powerful card, or use a single powerful CAT.
+
+#### The Language and Phrasing for CATS
+To prevent confusion, but also keep things simple we have to find a balance between descriptive and simple wording. Concise I think is the goal. If we force a structure of phrases (which will ultimately be the case given the goal of modularity) that become familiar and understandable, then we can reduce the level of confusion for when an effect could/would/should occur and in what order.
+
+- **Whenever a card is Played**
+  - Past Tense: Whenever any card is Played and not Attuned.
+  - This would resolve before the effect of the card.
+	- So if it were a Manifestation (Fiend or Charm) being played the order would be:
+	  1. Card is Played, a Fiend
+	  2. Whenever a card is Played CAT
+	  3. Manifest Fiend -> the Fiend is Manifested
+	- If it were an Encantation:
+	  1. Card is Played, a Cantrip
+	  2. Whenever a card is Played CAT
+	  3. Encantation is Chanted
+- **Whenever a card is Attuned**
+  - Past Tense: Whenever any card is Attuned instead of Played.
+- **Whenever a Manifestation is Manifested**
+  - Past Tense: Whenever any Manifestation enters play under any players control
+  - Addendums: 
+	- Heroic or Villainous could be inserted as "Whenever a Heroic Manifestation is Manifested".
+	- Color Identity could be inserted as "Whenever a Blue Manifestation is Manifested".
+	- Location and Ownership could be inserted "Whenever a Manifestation is Manifested under your control".
+- **Whenever a Fiend is Manifested**
+  - Past Tense: Whenever any Fiend enters play under any players control
+  - Replacements: Fiend could be replaced with Charm
+
+TODO Fill in with Charms and Cantrips and Spells
 
 ## Visual Style
 Glow Fairy Crystal Forest. Very Colorful and Elemental.
