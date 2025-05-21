@@ -153,17 +153,32 @@ Card properties are as follows:
   - Default values of `0`
 - Array of Effect Codes
 
-#### SuperTypes
+#### Super Types
 In a traditional sense, a card is the object that is placed onto the board. In this case though, since we're purely digital we don't have to refer to just *card*. We can distinguish absolutely that cards contain spells, and those spells either *Manifest* something or execute an effect/ability. With this in mind;
  - Fiends and Charms are Manifestations
+   - They can also be either Heroic or Villainous
  - Spells and Cantrips are Encantations
 
+#### Heroic or Villainous
+To assist with card story-telling, cards can have a Super Type called Heroic, or Villainous. All of these cards must have a CAT for if the card is already in play to resolve a different effect. This could be on the backside of the card, but we're digital so we can really have fun with the design.
+
+Example:
+ - Queen Sarah, the Diligant
+ - Yellow
+ - Heroic Orderly Fiend
+ - CAT 1:
+   - Whenever a Fiend with Toughness less or greater than Queen Sarah's Toughness is manifested, set it's toughness to be equal to Queen Sarahs.
+ - CAT 2:
+   - If Queen Sarah is in play, give her a +1 Counter
+
+#### Art
 How Card Images will be made is currently undecided.
 - Sticker system, where players arrange and color stickers in an area?
 - Camera Access?
 - Draw/Paint tools?
 - Can't really stop anyone from making offensive content here...
 
+#### Abilities, Keywords, CATS
 All Condition Action Triggers or CATS will have Rarity levels to associate with the Rarity of card template, as well as Crystal Restrictions. Making a card for the player should start with what Crystal, then CATS load in a list depending on Rarity and Crystal. The effects and themes will be based on the Crystal Spectrum. Some CATS will be commonplace, and basically become Keywords. 
 - Card Effects and abilities all have a hard cap of 3 triggers, until next upkeep.
 
