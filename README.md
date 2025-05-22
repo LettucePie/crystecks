@@ -20,6 +20,48 @@ A decentralized card dueling game. Players earn coins from ai matches or matches
 - All cards can be resources
   - Each turn you can attune one card into your attunement spectrum
 
+
+### Number of Players
+I'm interpreting this as a 1v1 only experience. This is mainly based on the fact that most interactions will be local and on a phone. If you're hanging out with multiple friends, you're most likely going to have a better time playing a physical table-top game together rather than all 4 of you struggling to make sense of 4 player-boards on a phone screen.
+
+#### Connectivity Method
+Currently not thoroughly explored. The likelihood of Apple opening the gates is very low, so the main target will be Android and Linux aarch64. The downside of depending on Android is their data-security seems to be in constant flux, I don't think anyone knows how to connect their app to a file-system anymore. This means I will need to make multiple connection methods in case one updates into obsolesence.
+
+#### CPU / AI Opponents
+There will be 2 types of CPU Opponents. One is the Base CPU and the other is an extension I'm calling a "Reflection".
+
+The Base CPU can be given a deck and a thought level. These thought levels ultimately represent difficulty, but should mimic realistic thought patterns a player may have playing the game.
+
+A Reflection is a special player made challenge that can be shared with other players. When making a deck, a player can choose to also setup a Reflection; this will have the player specify their favorite card, and favorite combo(s) found within the deck.
+
+**The Thought Levels**
+1. The bare minimum. Really just playing cards and declaring attackers.
+  - Primary Goal: Playing out their hand
+  - Secondary Goal: Getting their opponent life total to 0
+  - Contextual Level: 0, it has zero concern with what is happening to it's board.
+  - Cautionary Level: 0, it has zero concern with what the opponent is doing.
+2. Is aware that their cards can synergize, but still blind to the opponent.
+  - Primary Goal: Playing out their hand
+  - Secondary Goal: Getting their opponent life total to 0
+  - Contextual Level: 1, seeks out some form of interaction, but doesn't plan to set it up or sensibly capitalize.
+  - Cautionary Level: 0, it has zero concern with what the opponent is doing.
+3. Actively wants their cards to synergize, and will show minimum levels of caution in trying to execute their plan.
+  - Primary Goal: Dynamically decided based on style of deck.
+  - Secondary Goal: Survival
+  - Contextual Level: 2, capable of setting up a combo or establishing a board-state.
+	- Look-Ahead: 2 Turns (This turn play A, next turn play B)
+  - Cautionary Level: 1, becomes aware that the opponents bigger creature can block and also kill. Zero regard to opponents synergy.
+4. Wants to combo, but is aware of responses.
+  - Primary Goal: Dynamically decided based on style of deck.
+  - Secondary Goal: Survival
+  - Contextual Level: 2, capable of setting up a combo or establishing a board-state.
+  - Cautionary Level: 2, can decipher the opponent may have a goal or goals.
+5. Prioritizes subduing it's opponent
+  - Primary Goal: Matching or exceeding the opponents board-state
+  - Secondary Goal: Dynmically decided based on style of deck.
+  - Contextual Level: 2, capable of setting up a combo or establishing a board-state.
+  - Cautionary Level: 3, will hold onto Charge and Cantrips to respond.
+
 ### Crystals / Colors
 RGBCMY (a fun nod to virtual colorspace)
 
