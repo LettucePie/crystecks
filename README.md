@@ -181,6 +181,8 @@ Card properties are as follows:
 - A String for the Name
 - An Array of integers for the cost
   - 2 Prism and 2 Magenta would be `[Prism, Prism, Magenta, Magenta]` or just `[0, 0, 5, 5]`
+- An Integer for the card SuperType
+  - `[Manifestation, Encantation]`
 - An integer for card type, most likely enum
   - `[Fiend, Spell, Cantrip, Charm]`
 - A follow-up integer enum for subtype
@@ -190,6 +192,8 @@ Card properties are as follows:
   - Charms could have "Battlefield Charm" or "Fiend Charm" or "Player Charm".
 - Another String for Fiends describing what they are such as "Deer" or "Human", ignore otherwise
   - Default value will be randomly pulled from a premade list of generic animals and fantasy races.
+- An Integer for Fiends if they're Regular, Heroic, or Villainous
+  - `[Regular, Heroic, Villainous]`
 - Power and Health for Fiends, ignore otherwise
   - Default values of `0`
 - Array of Effect Codes
@@ -198,7 +202,7 @@ Card properties are as follows:
 In a traditional sense, a card is the object that is placed onto the board. In this case though, since we're purely digital we don't have to refer to just *card*. We can distinguish absolutely that cards contain spells, and those spells either *Manifest* something or execute an effect/ability. With this in mind;
  - Fiends and Charms are Manifestations
    - Manifestations are Manifested
-   - They can also be either Heroic or Villainous
+   - Fiends can also be either Heroic or Villainous
  - Spells and Cantrips are Encantations
    - Encantations are Chanted
 
@@ -210,7 +214,7 @@ Example:
  - Yellow
  - Heroic Orderly Fiend
  - CAT 1:
-   - Whenever a Fiend with Toughness less or greater than Queen Sarah's Toughness is manifested, set it's toughness to be equal to Queen Sarahs.
+   - Whenever a Fiend is Manifested, if it's Toughness is less or greater than Queen Sarah's Toughness, set it's toughness to be equal to Queen Sarahs.
  - CAT 2:
    - If Queen Sarah is in play, give her a +1 Counter
 
@@ -220,6 +224,13 @@ How Card Images will be made is currently undecided.
 - Camera Access?
 - Draw/Paint tools?
 - Can't really stop anyone from making offensive content here...
+
+#### Card Frames
+Frames will be universal and most likely static in design. I feel like keeping the frames recognizable is important. The following card Frames will be available:
+ - Manifestations
+ - Heroic Fiends
+ - Villainous Fiends
+ - Encantations
 
 ### Abilities, Keywords, CATS
 All Condition Action Triggers or CATS will have Rarity levels to associate with the Rarity of card template, as well as Crystal Restrictions. Making a card for the player should start with what Crystal, then CATS load in a list depending on Rarity and Crystal. The effects and themes will be based on the Crystal Spectrum. Some CATS will be commonplace, and basically become Keywords. 
@@ -238,6 +249,7 @@ Players should be able to combine multiple weaker level CATS on a powerful card,
 #### The Language and Phrasing for CATS
 To prevent confusion, but also keep things simple we have to find a balance between descriptive and simple wording. Concise I think is the goal. If we force a structure of phrases (which will ultimately be the case given the goal of modularity) that become familiar and understandable, then we can reduce the level of confusion for when an effect could/would/should occur and in what order.
 
+**Triggered CATS **
 - **Whenever a card is Played**
   - Past Tense: Whenever any card is Played and not Attuned.
   - This would resolve before the effect of the card.
@@ -251,17 +263,28 @@ To prevent confusion, but also keep things simple we have to find a balance betw
 	  3. Encantation is Chanted
 - **Whenever a card is Attuned**
   - Past Tense: Whenever any card is Attuned instead of Played.
-- **Whenever a Manifestation is Manifested**
+- **Whenever a Player Manifests**
   - Past Tense: Whenever any Manifestation enters play under any players control
-  - Addendums: 
-	- Heroic or Villainous could be inserted as "Whenever a Heroic Manifestation is Manifested".
-	- Color Identity could be inserted as "Whenever a Blue Manifestation is Manifested".
-	- Location and Ownership could be inserted "Whenever a Manifestation is Manifested under your control".
 - **Whenever a Fiend is Manifested**
   - Past Tense: Whenever any Fiend enters play under any players control
   - Replacements: Fiend could be replaced with Charm
+- **Whenever a Player Chants**
+  - Past Tense: Whenever any Cantrip or Spell card is activated
+- **Whenever a Spell is Chanted**
+  - Past Tense: Whenever any Spell card is activated
+  - Replacements: Spell could be replaced with Cantrip
 
-TODO Fill in with Charms and Cantrips and Spells
+All of these can also be customized with Addendums specifying Color, Type, or Ownership.
+Examples:
+- Heroic or Villainous could be inserted as "Whenever a Player Manifests something Heroic".
+- Color Identity could be inserted as "Whenever a Player Manifests something Blue".
+  - or "Whenever a Player Chants something Blue".
+  - or "Whenever a Red Card is Attuned".
+- Location and Ownership could be inserted "Whenever you Manifest".
+  - or "Whenever you Chant".
+
+**Activated CATS**
+TODO make up new name for Activated Abilities...
 
 ## Visual Style
 Glow Fairy Crystal Forest. Very Colorful and Elemental.
