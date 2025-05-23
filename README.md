@@ -228,8 +228,10 @@ How Card Images will be made is currently undecided.
 #### Card Frames
 Frames will be universal and most likely static in design. I feel like keeping the frames recognizable is important. The following card Frames will be available:
  - Manifestations
- - Heroic Fiends
- - Villainous Fiends
+   - Generic Fiends
+   - Heroic Fiends
+   - Villainous Fiends
+   - Charms
  - Encantations
 
 ### Abilities, Keywords, CATS
