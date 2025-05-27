@@ -19,6 +19,12 @@ A decentralized card dueling game. Players earn coins from ai matches or matches
 - Max health of 30
 - All cards can be resources
   - Each turn you can attune one card into your attunement spectrum
+- Cards can exist in multiple locations
+  - The Deck
+  - The Hand
+  - The Battlefield
+  - The Glitter Pouch (Graveyard)
+  - The Shadow (Exile)
 
 
 ### Number of Players
