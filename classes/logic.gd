@@ -16,4 +16,5 @@ var conditions : Array[Condition] = [
 	Condition.new("If it is my turn", [0,1]),
 	Condition.new("If it is Not my turn", [0,4]),
 	Condition.new("If I Gained Life", [1,0]),
+	Condition.new("If I Lost Life", [EVENT_TYPE.PLAYER_STATUS, STATUS_FLAGS.PLAYER_LOST])
 ]
