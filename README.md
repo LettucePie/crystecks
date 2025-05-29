@@ -13,7 +13,14 @@ A decentralized card dueling game. Players earn coins from ai matches or matches
 
 ### Game Structure
 - Turn based
-  - Phases; upkeep, draw, play, combat, post combat, end
+  - Phases:
+    - Start
+    - Recharge (akin to Untapping)
+    - Draw
+    - Play
+    - Combat
+    - Post-Combat Play
+    - End
 - 6 Crystals representing Elemental Attunements, Faction, Gameplay identity, and emotional energy.
 - Starting Health of 20
 - Max health of 30
