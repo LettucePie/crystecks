@@ -31,3 +31,18 @@ enum BATTLEFIELD_FLAGS {
 var event_enum_table : Array = [
 	TURN_FLAGS, STATUS_FLAGS, DECK_FLAGS, HAND_FLAGS
 ]
+
+
+class GameEvent:
+	var turn_id : int
+	var event_type : EVENT_TYPE
+	var event_flag : int
+	var host_entities : Array[Entity]
+	var target_entities : Array[Entity]
+
+
+var event_log : Array[GameEvent] = []
+var turn_id : int = 0
+
+func log_event(args : Array):
+	pass
