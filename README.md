@@ -134,6 +134,9 @@ During Upkeep the player gets charged with energy matching their attunement spec
 ### Playing Cards / Energy Costs
 Just above is the Attunement and Energy section. Referring to that, we had an example where it's turn 4 and we have 2 Red, 1 Yellow, and 1 Prism Energy / Attunement. Those Enery resources get consumed upon playing cards that require them. Colors that aren't Prism require energy of their matching color to play. So with 2 Red, 1 Yellow, and 1 Prism we can play 2 cards with a cost a 1 Red, or 1 Card with a cost of 2 Red, or 1 card with a cost a 1 Red and 1 Yellow. Prism Costs can be covered by Prism energy or any color energy. 
 
+### Zones, Battlefield, Glitter Pouch, Shadow
+The Battlefield is what it is. It's the area where Manifestations reside, and combat occurs. The Glitter Pouch is effectively the Trash/Graveyard. It will function like any other card-games discard pile. The Shadow is going to mostly be like "Exile", it will generally be the place where cards don't come back from. However I want there to be play-styles that utilize The Shadow, and it's going to have a distinct difference where all cards here are not revealed, or public.
+
 ### Sets and Packs
 Players can make and distribute Sets. Sets have 30 cards made by the player. Connecting players can choose to also distribute the set. Upon accepting the set, they have to approve or disapprove the name and art of each card, using rng to replace if they don't like it. After a set has been accepted and approved, other connecting players can accept it in the future, and they too have to approve it. Also the player gets 3 free packs after approving it. Packs contain 5 cards, but each card comes in pairs, bringing a total of 10.
 
