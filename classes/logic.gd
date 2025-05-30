@@ -32,7 +32,9 @@ var conditions : Array[Condition] = [
 	Condition.new("If it happened Last Turn", [EVENT_TYPE.TIME, TIME_FLAGS.PREVIOUS_TURN]),
 	Condition.new("If I Gained Life", [EVENT_TYPE.PLAYER_STATUS, STATUS_FLAGS.PLAYER_GAINED]),
 	Condition.new("If I Lost Life", [EVENT_TYPE.PLAYER_STATUS, STATUS_FLAGS.PLAYER_LOST]),
-	Condition.new("If the entity is Prism", [EVENT_TYPE.CRYSTAL, Card.CRYSTAL.Prism])
+	Condition.new("If the entity is Prism", [EVENT_TYPE.CRYSTAL, Card.CRYSTAL.Prism]),
+	Condition.new("If the entity is Targeted", [EVENT_TYPE.ACTION, ACTION_FLAGS.TARGETED]),
+	Condition.new("If the entity id Damaged", [EVENT_TYPE.ACTION, ACTION_FLAGS.DAMAGED])
 ]
 
 
