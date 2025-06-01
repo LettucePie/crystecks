@@ -5,7 +5,7 @@ class_name Logic
 
 class Condition:
 	var short_name : String = ""
-	var requirements : Array = []
+	var requirements : Array[EventPair] = []
 	
 	func _init(arg1, arg2):
 		short_name = arg1
@@ -26,15 +26,15 @@ class Trigger:
 
 
 var conditions : Array[Condition] = [
-	Condition.new("If it is my turn", [EVENT_TYPE.TIME, TIME_FLAGS.PLAYER_TURN]),
-	Condition.new("If it is Not my turn", [EVENT_TYPE.TIME, TIME_FLAGS.OPPONENT_TURN]),
-	Condition.new("If it happened This Turn", [EVENT_TYPE.TIME, TIME_FLAGS.THIS_TURN]),
-	Condition.new("If it happened Last Turn", [EVENT_TYPE.TIME, TIME_FLAGS.PREVIOUS_TURN]),
-	Condition.new("If I Gained Life", [EVENT_TYPE.PLAYER_STATUS, STATUS_FLAGS.PLAYER_GAINED]),
-	Condition.new("If I Lost Life", [EVENT_TYPE.PLAYER_STATUS, STATUS_FLAGS.PLAYER_LOST]),
-	Condition.new("If the entity is Prism", [EVENT_TYPE.CRYSTAL, Card.CRYSTAL.Prism]),
-	Condition.new("If the entity is Targeted", [EVENT_TYPE.ACTION, ACTION_FLAGS.TARGETED]),
-	Condition.new("If the entity id Damaged", [EVENT_TYPE.ACTION, ACTION_FLAGS.DAMAGED])
+	Condition.new(
+		"If it is my Turn",
+		[
+			EventPair.new(EVENT_TYPE.TURN, TURN_FLAGS.THIS_TURN),
+			EventPair.new(EVENT_TYPE.OWNERSHIP, OWNERSHIP_FLAGS.HOST_PLAYER),
+			EventPair.new(EVENT_TYPE.TIMING, TIMING_FLAGS.PRESENT)
+		]
+	)
+	
 ]
 
 
@@ -44,7 +44,5 @@ var actions : Array[Action] = [
 
 
 var triggers : Array[Trigger] = [
-	Trigger.new("At the Start of My Turn", [EVENT_TYPE.TIME, TIME_FLAGS.PLAYER_START]),
-	Trigger.new("At the Start of the opponents Turn", [EVENT_TYPE.TIME, TIME_FLAGS.OPPONENT_START]),
-	Trigger.new("At the Start of Each Turn", [EVENT_TYPE.TIME, TIME_FLAGS.TURN_START])
+	
 ]
